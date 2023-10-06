@@ -84,9 +84,61 @@ Mobile View :
 
 **Client:** Angular, Rxjs, Material UI
 
-
-
-
+## Folder Struture
+```bash
+📦src
+ ┣ 📂app
+ ┃ ┣ 📂components
+ ┃ ┃ ┣ 📂ceo
+ ┃ ┃ ┃ ┣ 📜ceo.component.css
+ ┃ ┃ ┃ ┣ 📜ceo.component.html
+ ┃ ┃ ┃ ┣ 📜ceo.component.spec.ts
+ ┃ ┃ ┃ ┗ 📜ceo.component.ts
+ ┃ ┃ ┣ 📂employee
+ ┃ ┃ ┃ ┣ 📜employee.component.css
+ ┃ ┃ ┃ ┣ 📜employee.component.html
+ ┃ ┃ ┃ ┣ 📜employee.component.spec.ts
+ ┃ ┃ ┃ ┗ 📜employee.component.ts
+ ┃ ┃ ┣ 📂head
+ ┃ ┃ ┃ ┣ 📜head.component.css
+ ┃ ┃ ┃ ┣ 📜head.component.html
+ ┃ ┃ ┃ ┣ 📜head.component.spec.ts
+ ┃ ┃ ┃ ┗ 📜head.component.ts
+ ┃ ┃ ┣ 📂team
+ ┃ ┃ ┃ ┣ 📜team.component.css
+ ┃ ┃ ┃ ┣ 📜team.component.html
+ ┃ ┃ ┃ ┣ 📜team.component.spec.ts
+ ┃ ┃ ┃ ┗ 📜team.component.ts
+ ┃ ┃ ┣ 📂team-dialog
+ ┃ ┃ ┃ ┣ 📜team-dialog.component.css
+ ┃ ┃ ┃ ┣ 📜team-dialog.component.html
+ ┃ ┃ ┃ ┣ 📜team-dialog.component.spec.ts
+ ┃ ┃ ┃ ┗ 📜team-dialog.component.ts
+ ┃ ┃ ┗ 📂team-member-dialog
+ ┃ ┃ ┃ ┣ 📜team-member-dialog.component.css
+ ┃ ┃ ┃ ┣ 📜team-member-dialog.component.html
+ ┃ ┃ ┃ ┣ 📜team-member-dialog.component.spec.ts
+ ┃ ┃ ┃ ┗ 📜team-member-dialog.component.ts
+ ┃ ┣ 📂models
+ ┃ ┃ ┗ 📜employee.model.ts
+ ┃ ┣ 📂services
+ ┃ ┃ ┣ 📜data.service.spec.ts
+ ┃ ┃ ┣ 📜data.service.ts
+ ┃ ┃ ┣ 📜team.service.spec.ts
+ ┃ ┃ ┗ 📜team.service.ts
+ ┃ ┣ 📜app-routing.module.ts
+ ┃ ┣ 📜app.component.css
+ ┃ ┣ 📜app.component.html
+ ┃ ┣ 📜app.component.spec.ts
+ ┃ ┣ 📜app.component.ts
+ ┃ ┗ 📜app.module.ts
+ ┣ 📂assets
+ ┃ ┗ 📜.gitkeep
+ ┣ 📜favicon.ico
+ ┣ 📜index.html
+ ┣ 📜main.ts
+ ┗ 📜styles.css
+```
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.5.
 
