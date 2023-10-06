@@ -1,0 +1,26 @@
+<h2>{{ data.isEditing ? 'Edit Team Member' : 'Add Team Member' }}</h2>
+<mat-form-field>
+  <input matInput placeholder="Name" [(ngModel)]="editedMember.name">
+</mat-form-field>
+<mat-form-field>
+  <input matInput placeholder="Position" [(ngModel)]="editedMember.position">
+</mat-form-field>
+<mat-form-field>
+  <input matInput placeholder="ID" [(ngModel)]="editedMember.id">
+</mat-form-field>
+<mat-form-field>
+  <input matInput placeholder="Phone" [(ngModel)]="editedMember.phone">
+</mat-form-field>
+<mat-form-field>
+  <input matInput placeholder="Email" [(ngModel)]="editedMember.email">
+</mat-form-field>
+
+<div class="buttons" *ngIf="!data.isEditing">
+  <button mat-button (click)="onCancelClick()">Cancel</button>
+  <button mat-button (click)="onAddClick()">Add</button>
+</div>
+
+<div class="buttons" *ngIf="data.isEditing">
+  <button mat-button (click)="onCancelClick()">Cancel</button>
+  <button mat-button (click)="onEditClick()">Save</button>
+</div>

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { CEO } from './models/employee.model';
+import { DataService } from './services/data.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'employee-management';
+  ceoData: CEO;
+
+  constructor(private dataService: DataService) {
+    this.ceoData = this.dataService.getCEOData();
+  }
 }

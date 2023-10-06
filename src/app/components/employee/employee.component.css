@@ -1,0 +1,12 @@
+/* Style for 'Leader' */
+.leader-style {
+    font-weight: bold;
+    color: blue;
+  }
+  
+  /* Style for 'Member' */
+  .member-style {
+    font-style: italic;
+    color: green;
+  }
+  

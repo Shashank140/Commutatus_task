@@ -1,0 +1,41 @@
+<mat-expansion-panel class="teams" (opened)="togglePanel()" (closed)="togglePanel()">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{ team.name }} - {{team.position}}
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+  
+    <div class="container">
+      <input matInput class="search" placeholder="Search by name" [(ngModel)]="searchText" (input)="searchTeamMembers()">
+      <button mat-raised-button class="add" color="primary" (click)="addTeamMember()">Add Team Member</button>
+    </div>
+
+    
+    <div *ngIf="filteredMembers.length > 0">
+      <div *ngFor="let employee of filteredMembers">
+        <app-employee [employee]="employee"></app-employee>
+        <button mat-icon-button color="primary" (click)="editTeamMember(employee)">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button color="warn" (click)="deleteTeamMember(employee)">
+          <mat-icon>delete</mat-icon>
+        </button>
+        <button mat-icon-button color="secondary" *ngIf="!employee.isLeader" (click)="promoteTeamMember(employee)">
+          <mat-icon>upgrade</mat-icon>
+        </button>
+        <mat-select class="select" placeholder="Move to team" (selectionChange)="moveTeamMemberToAnotherTeam(employee, $event.value)">
+            <mat-option *ngFor="let targetTeam of allTeams" [value]="targetTeam">
+              {{ targetTeam.name }}
+            </mat-option>
+        </mat-select>
+
+          <hr>
+          
+      </div>
+    </div>
+    <div *ngIf="filteredMembers.length === 0">
+      No employees found.
+    </div>
+  
+  </mat-expansion-panel>
+  

@@ -1,0 +1,32 @@
+<mat-expansion-panel class="header" (opened)="togglePanel()" (closed)="togglePanel()">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{ head.name }} - {{head.position}}
+      </mat-panel-title>
+      <div class="head-container">
+        <div class="head-actions">
+          <button mat-icon-button (click)="addTeam()">
+            <mat-icon>add</mat-icon>
+          </button>
+          <!-- <button mat-icon-button (click)="editTeam(team)">
+            <mat-icon>edit</mat-icon>
+          </button> -->
+        </div>
+      </div>
+      
+    </mat-expansion-panel-header>
+  
+    <div class="team-container" *ngIf="head.teams && head.teams.length > 0">
+      <div *ngFor="let team of head.teams" class="team-item">
+        <div class="team-actions">
+          <button mat-icon-button (click)="editTeam(team)">
+            <mat-icon>edit</mat-icon>
+          </button>
+        </div>
+        <app-team [team]="team"></app-team>
+      </div>
+    </div>
+    
+  </mat-expansion-panel>
+  
+  

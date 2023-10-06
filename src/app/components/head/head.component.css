@@ -1,0 +1,27 @@
+.header {
+    margin-top: 10px;
+}
+
+.team-container {
+    /* display: flex; */
+    flex-wrap: wrap;
+  }
+  
+  .team-item {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 80%; 
+    max-width: 100%;
+  }
+  
+  .team-actions {
+    margin-right: 10px;
+  }
+  
+  app-team {
+    flex: 1;
+  }
+  

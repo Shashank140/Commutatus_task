@@ -1,0 +1,51 @@
+.select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.search {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px; 
+    margin-right: 20px;
+}
+
+.add {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px; 
+    margin-right: 20px;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (min-width: 768px) {
+    .teams {
+      max-width: 100%;
+    }
+  }
+  
+  /* For mobile view */
+  @media (max-width: 767px) {
+    .teams {
+      max-width: 35%;
+    }
+  }
+  
+  
+  
+  
+  

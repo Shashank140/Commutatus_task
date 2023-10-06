@@ -1,0 +1,9 @@
+<h2>{{ data.action }} Team</h2>
+<mat-form-field>
+  <input matInput placeholder="Team Name" [(ngModel)]="data.name">
+</mat-form-field>
+
+<div class="buttons">
+  <button mat-button (click)="onCancelClick()">Cancel</button>
+  <button mat-button (click)="onSaveClick()">Save</button>
+</div>

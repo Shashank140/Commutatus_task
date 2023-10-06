@@ -1,0 +1,12 @@
+<div class="collapsible-panel">
+    <mat-expansion-panel (opened)="togglePanel()" (closed)="togglePanel()">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{ ceo.name }} - {{ceo.position}}
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+  
+      <app-head *ngFor="let head of ceo.heads" [head]="head"></app-head>
+    </mat-expansion-panel>
+  </div>
+  
