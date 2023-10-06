@@ -3,6 +3,9 @@ deployed - https://shashank-commutatus.netlify.app/
 
 requirements - https://commutatus.notion.site/Hierarchy-UI-Assignment-4c953c4ef93d4d668bc961c4eb819109
 
+![image](https://github.com/Shashank140/Commutatus_task/assets/56768653/c46d979d-e361-42af-b388-0c187da512b5)
+
+
 
 
 # EmployeeManagement
