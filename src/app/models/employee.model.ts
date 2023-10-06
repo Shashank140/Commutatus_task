@@ -6,13 +6,13 @@ export interface Employee {
   id: string;
   phone: string;
   email: string;
-  team: string;
+  teamPosition: string;
   position: string
 }
 
 export interface Team {
   name: string;
-  position: string;
+  teamPosition: string;
   members: Employee[];
 }
 

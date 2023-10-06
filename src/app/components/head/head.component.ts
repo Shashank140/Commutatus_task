@@ -40,7 +40,7 @@ export class HeadComponent {
         this.head.teams.push({
           name: result,
           members: [],
-          position: 'Team'
+          teamPosition: 'Team'
         });
       }
     });

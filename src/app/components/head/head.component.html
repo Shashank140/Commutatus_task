@@ -1,7 +1,8 @@
 <mat-expansion-panel class="header" (opened)="togglePanel()" (closed)="togglePanel()">
     <mat-expansion-panel-header>
       <mat-panel-title>
-        {{ head.name }} - {{head.position}}
+        <p><strong>Name:</strong> {{ head.name }}</p>
+          <p style="margin-left: 20px;"><strong>Position:</strong> {{ head.position }}</p>
       </mat-panel-title>
       <div class="head-container">
         <div class="head-actions">

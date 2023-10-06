@@ -17,6 +17,8 @@ export class TeamComponent {
   filteredLeader: Employee;
   filteredMembers: Employee[] = [];
   newMember: Employee | null = null;
+  hr = 'Head of staff/HR';
+  design = 'Head of Design';
 
   constructor(public dialog: MatDialog, private teamService: TeamService) { }
 
@@ -36,7 +38,7 @@ export class TeamComponent {
   }
 
   addTeamMember() {
-    this.newMember = { name: '',isLeader: false, position: '', id: '', phone: '', email: '', team: '' };
+    this.newMember = { name: '',isLeader: false, position: '', id: '', phone: '', email: '', teamPosition: '' };
     this.openDialog(false);  // Pass false to indicate not editing
   }
 
@@ -146,17 +148,17 @@ export class TeamComponent {
   
     // Add member to the target team
     targetTeam.members.push(newMember);
-    this.filteredMembers.push(newMember);
+    // this.filteredMembers.push(newMember);
   }
   
   
   private isMoveAllowed(newMember: Employee, targetTeam: Team): boolean {
-    const disallowedMoves = {
-      'HR': ['Design'],
-      'Design': ['HR']
-    };
+    const newMemberPosition = newMember.teamPosition;
+    const targetTeamPosition = targetTeam.teamPosition;
   
-    return !disallowedMoves[newMember.team] || disallowedMoves[newMember.team].indexOf(targetTeam.name) === -1;
+    // Check if the move is allowed based on positions
+    if(newMemberPosition == this.hr && targetTeamPosition == this.design) return false;
+    return true;  // Move is allowed by default if positions are not in disallowedMoves
   }
   
 }

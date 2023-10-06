@@ -2,7 +2,8 @@
     <mat-expansion-panel (opened)="togglePanel()" (closed)="togglePanel()">
       <mat-expansion-panel-header>
         <mat-panel-title>
-          {{ ceo.name }} - {{ceo.position}}
+          <p><strong>Name:</strong> {{ ceo.name }}</p>
+          <p style="margin-left: 20px;"><strong>Position:</strong> {{ ceo.position }}</p>
         </mat-panel-title>
       </mat-expansion-panel-header>
   
