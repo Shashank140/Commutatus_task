@@ -80,8 +80,9 @@ Mobile View :
 ![image](https://github.com/Shashank140/Commutatus_task/assets/56768653/14bbaf28-fe8f-4b27-9bd1-051b6a262edc)
 
 
+## Tech Stack
 
-
+**Client:** Angular, Rxjs, Material UI
 
 
 
